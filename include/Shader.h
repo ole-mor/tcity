@@ -2,30 +2,41 @@
 #define SHADER_H
 
 #include <glad/glad.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <string>
-#include <chrono>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 class Shader {
 public:
     unsigned int ID;
-    Shader(const char* vertexPath, const char* fragmentPath);
-    void use();
-    void setBool(const std::string &name, bool value) const;
-    void setInt(const std::string &name, int value) const;
-    void setFloat(const std::string &name, float value) const;
-    void setVec4(const std::string &name, float x, float y, float z, float w) const;  // New method
-    void reloadIfModified();
 
+    Shader(const char* vertexPath, const char* fragmentPath);
+
+    void use() const {
+        glUseProgram(ID);
+    }
+
+    void setMat4(const std::string &name, const glm::mat4 &mat) const {
+        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
+    }
+
+    void setVec3(const std::string &name, const glm::vec3 &value) const {
+        glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(value));
+    }
+
+    void reloadIfModified();
 private:
     std::string vertexPath;
     std::string fragmentPath;
-    std::chrono::time_point<std::chrono::system_clock> vertexLastModifiedTime;
-    std::chrono::time_point<std::chrono::system_clock> fragmentLastModifiedTime;
+    std::time_t vertexShaderLastWriteTime;
+    std::time_t fragmentShaderLastWriteTime;
 
-    std::string readFile(const char* filePath);
-    void checkCompileErrors(unsigned int shader, std::string type);
-    std::chrono::time_point<std::chrono::system_clock> getLastModifiedTime(const char* filePath);
-    void compileAndLinkShaders();
+    std::time_t getLastWriteTime(const std::string& path) const;
+    void checkForModification();
+    void compileAndLinkShaders(const std::string& vertexCode, const std::string& fragmentCode);
 };
 
-#endif
+#endif // SHADER_H

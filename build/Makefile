@@ -175,6 +175,19 @@ glad/fast:
 .PHONY : glad/fast
 
 #=============================================================================
+# Target rules for targets named tinygltf
+
+# Build rule for target.
+tinygltf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinygltf
+.PHONY : tinygltf
+
+# fast build rule for target.
+tinygltf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/build
+.PHONY : tinygltf/fast
+
+#=============================================================================
 # Target rules for targets named tcity
 
 # Build rule for target.
@@ -225,6 +238,78 @@ update_mappings: cmake_check_build_system
 update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
+
+external/tinygltf/tiny_gltf.o: external/tinygltf/tiny_gltf.cc.o
+.PHONY : external/tinygltf/tiny_gltf.o
+
+# target to build an object file
+external/tinygltf/tiny_gltf.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.o
+.PHONY : external/tinygltf/tiny_gltf.cc.o
+
+external/tinygltf/tiny_gltf.i: external/tinygltf/tiny_gltf.cc.i
+.PHONY : external/tinygltf/tiny_gltf.i
+
+# target to preprocess a source file
+external/tinygltf/tiny_gltf.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.i
+.PHONY : external/tinygltf/tiny_gltf.cc.i
+
+external/tinygltf/tiny_gltf.s: external/tinygltf/tiny_gltf.cc.s
+.PHONY : external/tinygltf/tiny_gltf.s
+
+# target to generate assembly for a file
+external/tinygltf/tiny_gltf.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/external/tinygltf/tiny_gltf.cc.s
+.PHONY : external/tinygltf/tiny_gltf.cc.s
+
+src/LoadModel.o: src/LoadModel.cpp.o
+.PHONY : src/LoadModel.o
+
+# target to build an object file
+src/LoadModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/LoadModel.cpp.o
+.PHONY : src/LoadModel.cpp.o
+
+src/LoadModel.i: src/LoadModel.cpp.i
+.PHONY : src/LoadModel.i
+
+# target to preprocess a source file
+src/LoadModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/LoadModel.cpp.i
+.PHONY : src/LoadModel.cpp.i
+
+src/LoadModel.s: src/LoadModel.cpp.s
+.PHONY : src/LoadModel.s
+
+# target to generate assembly for a file
+src/LoadModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/LoadModel.cpp.s
+.PHONY : src/LoadModel.cpp.s
+
+src/RenderGLTF.o: src/RenderGLTF.cpp.o
+.PHONY : src/RenderGLTF.o
+
+# target to build an object file
+src/RenderGLTF.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o
+.PHONY : src/RenderGLTF.cpp.o
+
+src/RenderGLTF.i: src/RenderGLTF.cpp.i
+.PHONY : src/RenderGLTF.i
+
+# target to preprocess a source file
+src/RenderGLTF.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/RenderGLTF.cpp.i
+.PHONY : src/RenderGLTF.cpp.i
+
+src/RenderGLTF.s: src/RenderGLTF.cpp.s
+.PHONY : src/RenderGLTF.s
+
+# target to generate assembly for a file
+src/RenderGLTF.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/RenderGLTF.cpp.s
+.PHONY : src/RenderGLTF.cpp.s
 
 src/RenderObject.o: src/RenderObject.cpp.o
 .PHONY : src/RenderObject.o
@@ -339,6 +424,16 @@ help:
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... tcity"
+	@echo "... tinygltf"
+	@echo "... external/tinygltf/tiny_gltf.o"
+	@echo "... external/tinygltf/tiny_gltf.i"
+	@echo "... external/tinygltf/tiny_gltf.s"
+	@echo "... src/LoadModel.o"
+	@echo "... src/LoadModel.i"
+	@echo "... src/LoadModel.s"
+	@echo "... src/RenderGLTF.o"
+	@echo "... src/RenderGLTF.i"
+	@echo "... src/RenderGLTF.s"
 	@echo "... src/RenderObject.o"
 	@echo "... src/RenderObject.i"
 	@echo "... src/RenderObject.s"

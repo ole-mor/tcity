@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tcity.dir/src/LoadModel.cpp.o"
+  "CMakeFiles/tcity.dir/src/LoadModel.cpp.o.d"
+  "CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o"
+  "CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o.d"
   "CMakeFiles/tcity.dir/src/RenderObject.cpp.o"
   "CMakeFiles/tcity.dir/src/RenderObject.cpp.o.d"
   "CMakeFiles/tcity.dir/src/Shader.cpp.o"

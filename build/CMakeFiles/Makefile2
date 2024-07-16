@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/oleornaes/dev/devl/tcity/build
 
 # The main recursive "all" target.
 all: CMakeFiles/glad.dir/all
+all: CMakeFiles/tinygltf.dir/all
 all: CMakeFiles/tcity.dir/all
 all: external/glfw/all
 .PHONY : all
@@ -74,6 +75,7 @@ preinstall: external/glfw/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/glad.dir/clean
+clean: CMakeFiles/tinygltf.dir/clean
 clean: CMakeFiles/tcity.dir/clean
 clean: external/glfw/clean
 .PHONY : clean
@@ -137,19 +139,46 @@ CMakeFiles/glad.dir/clean:
 .PHONY : CMakeFiles/glad.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/tinygltf.dir
+
+# All Build rule for target.
+CMakeFiles/tinygltf.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=31,32 "Built target tinygltf"
+.PHONY : CMakeFiles/tinygltf.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tinygltf.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oleornaes/dev/devl/tcity/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tinygltf.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oleornaes/dev/devl/tcity/build/CMakeFiles 0
+.PHONY : CMakeFiles/tinygltf.dir/rule
+
+# Convenience name for target.
+tinygltf: CMakeFiles/tinygltf.dir/rule
+.PHONY : tinygltf
+
+# clean rule for target.
+CMakeFiles/tinygltf.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinygltf.dir/build.make CMakeFiles/tinygltf.dir/clean
+.PHONY : CMakeFiles/tinygltf.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/tcity.dir
 
 # All Build rule for target.
 CMakeFiles/tcity.dir/all: CMakeFiles/glad.dir/all
+CMakeFiles/tcity.dir/all: CMakeFiles/tinygltf.dir/all
 CMakeFiles/tcity.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=25,26,27,28 "Built target tcity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=25,26,27,28,29,30 "Built target tcity"
 .PHONY : CMakeFiles/tcity.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tcity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oleornaes/dev/devl/tcity/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oleornaes/dev/devl/tcity/build/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tcity.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oleornaes/dev/devl/tcity/build/CMakeFiles 0
 .PHONY : CMakeFiles/tcity.dir/rule
@@ -222,7 +251,7 @@ external/glfw/src/CMakeFiles/glfw.dir/clean:
 external/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=29 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=33 "Built target update_mappings"
 .PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.

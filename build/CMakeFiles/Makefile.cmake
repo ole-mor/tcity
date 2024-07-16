@@ -49,6 +49,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.29.5/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.29.5/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/usr/local/Cellar/cmake/3.29.5/share/cmake/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/local/share/glm/glmConfig-release.cmake"
+  "/usr/local/share/glm/glmConfig.cmake"
+  "/usr/local/share/glm/glmConfigVersion.cmake"
   )
 
 # The corresponding makefile is:
@@ -71,6 +74,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/glad.dir/DependInfo.cmake"
+  "CMakeFiles/tinygltf.dir/DependInfo.cmake"
   "CMakeFiles/tcity.dir/DependInfo.cmake"
   "external/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "external/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"

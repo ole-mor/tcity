@@ -111,11 +111,41 @@ CMakeFiles/tcity.dir/src/RenderObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcity.dir/src/RenderObject.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/oleornaes/dev/devl/tcity/src/RenderObject.cpp -o CMakeFiles/tcity.dir/src/RenderObject.cpp.s
 
+CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o: CMakeFiles/tcity.dir/flags.make
+CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o: /Users/oleornaes/dev/devl/tcity/src/RenderGLTF.cpp
+CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o: CMakeFiles/tcity.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o -MF CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o.d -o CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o -c /Users/oleornaes/dev/devl/tcity/src/RenderGLTF.cpp
+
+CMakeFiles/tcity.dir/src/RenderGLTF.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcity.dir/src/RenderGLTF.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/oleornaes/dev/devl/tcity/src/RenderGLTF.cpp > CMakeFiles/tcity.dir/src/RenderGLTF.cpp.i
+
+CMakeFiles/tcity.dir/src/RenderGLTF.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcity.dir/src/RenderGLTF.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/oleornaes/dev/devl/tcity/src/RenderGLTF.cpp -o CMakeFiles/tcity.dir/src/RenderGLTF.cpp.s
+
+CMakeFiles/tcity.dir/src/LoadModel.cpp.o: CMakeFiles/tcity.dir/flags.make
+CMakeFiles/tcity.dir/src/LoadModel.cpp.o: /Users/oleornaes/dev/devl/tcity/src/LoadModel.cpp
+CMakeFiles/tcity.dir/src/LoadModel.cpp.o: CMakeFiles/tcity.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tcity.dir/src/LoadModel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tcity.dir/src/LoadModel.cpp.o -MF CMakeFiles/tcity.dir/src/LoadModel.cpp.o.d -o CMakeFiles/tcity.dir/src/LoadModel.cpp.o -c /Users/oleornaes/dev/devl/tcity/src/LoadModel.cpp
+
+CMakeFiles/tcity.dir/src/LoadModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcity.dir/src/LoadModel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/oleornaes/dev/devl/tcity/src/LoadModel.cpp > CMakeFiles/tcity.dir/src/LoadModel.cpp.i
+
+CMakeFiles/tcity.dir/src/LoadModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcity.dir/src/LoadModel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/oleornaes/dev/devl/tcity/src/LoadModel.cpp -o CMakeFiles/tcity.dir/src/LoadModel.cpp.s
+
 # Object files for target tcity
 tcity_OBJECTS = \
 "CMakeFiles/tcity.dir/src/main.cpp.o" \
 "CMakeFiles/tcity.dir/src/Shader.cpp.o" \
-"CMakeFiles/tcity.dir/src/RenderObject.cpp.o"
+"CMakeFiles/tcity.dir/src/RenderObject.cpp.o" \
+"CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o" \
+"CMakeFiles/tcity.dir/src/LoadModel.cpp.o"
 
 # External object files for target tcity
 tcity_EXTERNAL_OBJECTS =
@@ -123,11 +153,14 @@ tcity_EXTERNAL_OBJECTS =
 tcity: CMakeFiles/tcity.dir/src/main.cpp.o
 tcity: CMakeFiles/tcity.dir/src/Shader.cpp.o
 tcity: CMakeFiles/tcity.dir/src/RenderObject.cpp.o
+tcity: CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o
+tcity: CMakeFiles/tcity.dir/src/LoadModel.cpp.o
 tcity: CMakeFiles/tcity.dir/build.make
 tcity: external/glfw/src/libglfw3.a
 tcity: libglad.a
+tcity: libtinygltf.a
 tcity: CMakeFiles/tcity.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable tcity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/oleornaes/dev/devl/tcity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tcity"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tcity.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

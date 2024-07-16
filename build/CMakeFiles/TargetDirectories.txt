@@ -1,4 +1,5 @@
 /Users/oleornaes/dev/devl/tcity/build/CMakeFiles/glad.dir
+/Users/oleornaes/dev/devl/tcity/build/CMakeFiles/tinygltf.dir
 /Users/oleornaes/dev/devl/tcity/build/CMakeFiles/tcity.dir
 /Users/oleornaes/dev/devl/tcity/build/CMakeFiles/edit_cache.dir
 /Users/oleornaes/dev/devl/tcity/build/CMakeFiles/rebuild_cache.dir

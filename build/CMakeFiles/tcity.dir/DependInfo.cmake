@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/oleornaes/dev/devl/tcity/src/LoadModel.cpp" "CMakeFiles/tcity.dir/src/LoadModel.cpp.o" "gcc" "CMakeFiles/tcity.dir/src/LoadModel.cpp.o.d"
+  "/Users/oleornaes/dev/devl/tcity/src/RenderGLTF.cpp" "CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o" "gcc" "CMakeFiles/tcity.dir/src/RenderGLTF.cpp.o.d"
   "/Users/oleornaes/dev/devl/tcity/src/RenderObject.cpp" "CMakeFiles/tcity.dir/src/RenderObject.cpp.o" "gcc" "CMakeFiles/tcity.dir/src/RenderObject.cpp.o.d"
   "/Users/oleornaes/dev/devl/tcity/src/Shader.cpp" "CMakeFiles/tcity.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/tcity.dir/src/Shader.cpp.o.d"
   "/Users/oleornaes/dev/devl/tcity/src/main.cpp" "CMakeFiles/tcity.dir/src/main.cpp.o" "gcc" "CMakeFiles/tcity.dir/src/main.cpp.o.d"

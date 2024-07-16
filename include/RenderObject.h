@@ -2,15 +2,16 @@
 #define RENDEROBJECT_H
 
 #include <glad/glad.h>
-#include <cstddef>  // Include this for size_t
+#include <cstddef>
 
 class RenderObject {
 public:
-    unsigned int VAO, VBO;
-
-    RenderObject(float vertices[], std::size_t vertexCount); // Use std::size_t
+    RenderObject(float vertices[], std::size_t vertexCount);
     ~RenderObject();
     void draw();
+
+private:
+    unsigned int VAO, VBO;
 };
 
 #endif
