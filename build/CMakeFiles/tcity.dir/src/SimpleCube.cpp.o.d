@@ -1,5 +1,6 @@
-CMakeFiles/tcity.dir/src/main.cpp.o: \
-  /Users/oleornaes/dev/devl/tcity/src/main.cpp \
+CMakeFiles/tcity.dir/src/SimpleCube.cpp.o: \
+  /Users/oleornaes/dev/devl/tcity/src/SimpleCube.cpp \
+  /Users/oleornaes/dev/devl/tcity/include/SimpleCube.h \
   /Users/oleornaes/dev/devl/tcity/external/glad/include/glad/glad.h \
   /Users/oleornaes/dev/devl/tcity/external/glad/include/KHR/khrplatform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdint.h \
@@ -32,10 +33,6 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_types/_intmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_types/_uintmax_t.h \
-  /Users/oleornaes/dev/devl/tcity/external/glfw/include/GLFW/glfw3.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/__stddef_max_align_t.h \
   /Users/oleornaes/dev/devl/tcity/include/glm/glm.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/detail/_fixes.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cmath \
@@ -57,6 +54,9 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_cv.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_const.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/version \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/type_traits \
@@ -819,16 +819,20 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Users/oleornaes/dev/devl/tcity/include/glm/vector_relational.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/integer.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/detail/func_integer.inl \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/matrix_transform.hpp \
+  /Users/oleornaes/dev/devl/tcity/include/Shader.h \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/type_ptr.hpp \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/quaternion.hpp \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/constants.hpp \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/scalar_constants.hpp \
+  /Users/oleornaes/dev/devl/tcity/include/glm/./ext/scalar_constants.inl \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/constants.inl \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/matrix_transform.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../mat4x4.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../vec2.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../vec3.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../vec4.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/matrix_projection.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/../gtc/constants.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/scalar_constants.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/./ext/scalar_constants.inl \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/constants.inl \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/../geometric.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/../trigonometric.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/../matrix.hpp \
@@ -842,10 +846,6 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../geometric.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../trigonometric.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../matrix.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/type_ptr.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/quaternion.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/constants.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../gtc/matrix_transform.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_relational.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/../detail/qualifier.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/./ext/vector_relational.inl \
@@ -919,31 +919,6 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../mat4x2.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../mat4x3.hpp \
   /Users/oleornaes/dev/devl/tcity/include/glm/gtc/type_ptr.inl \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/string_cast.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../glm.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../gtc/type_precision.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_int2_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_int3_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_int4_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/scalar_int_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_uint2_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_uint3_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/vector_uint4_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../ext/scalar_uint_sized.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_vec2.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat2x2.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat2x3.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat2x4.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat3x2.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat3x4.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat4x2.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/../detail/type_mat4x3.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/type_precision.inl \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../gtc/quaternion.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../gtx/dual_quaternion.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../gtc/constants.hpp \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/dual_quaternion.inl \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/../geometric.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__string/char_traits.h \
@@ -957,10 +932,7 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__fwd/string_view.h \
-  /Users/oleornaes/dev/devl/tcity/include/glm/gtx/string_cast.inl \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdarg \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/locale.h \
@@ -983,7 +955,9 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/streambuf \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/nl_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/types.h \
@@ -1013,11 +987,6 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/oleornaes/dev/devl/tcity/include/tiny_gltf.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
-  /Users/oleornaes/dev/devl/tcity/include/Shader.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
@@ -1036,7 +1005,5 @@ CMakeFiles/tcity.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
-  /Users/oleornaes/dev/devl/tcity/include/RenderObject.h \
-  /Users/oleornaes/dev/devl/tcity/include/LoadModel.h \
-  /Users/oleornaes/dev/devl/tcity/include/RenderGLTF.h \
-  /Users/oleornaes/dev/devl/tcity/include/SimpleCube.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
+  /Users/oleornaes/dev/devl/tcity/include/glm/gtc/matrix_transform.hpp

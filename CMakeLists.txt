@@ -32,10 +32,16 @@ add_executable(tcity
     src/Shader.cpp 
     src/RenderObject.cpp 
     src/RenderGLTF.cpp 
-    src/LoadModel.cpp
+    src/LoadModel.cpp 
+    src/SimpleCube.cpp     # Add this line
 )
 
 target_link_libraries(tcity glfw glad ${CMAKE_DL_LIBS} tinygltf)
 
-# Include directories for GLFW and GLAD
-target_include_directories(tcity PRIVATE external/glad/include external/glfw/include include external/tinygltf)
+# Include directories for GLFW, GLAD, and your source files
+target_include_directories(tcity PRIVATE 
+    external/glad/include 
+    external/glfw/include 
+    include 
+    external/tinygltf
+)

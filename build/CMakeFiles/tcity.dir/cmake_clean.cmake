@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tcity.dir/src/RenderObject.cpp.o.d"
   "CMakeFiles/tcity.dir/src/Shader.cpp.o"
   "CMakeFiles/tcity.dir/src/Shader.cpp.o.d"
+  "CMakeFiles/tcity.dir/src/SimpleCube.cpp.o"
+  "CMakeFiles/tcity.dir/src/SimpleCube.cpp.o.d"
   "CMakeFiles/tcity.dir/src/main.cpp.o"
   "CMakeFiles/tcity.dir/src/main.cpp.o.d"
   "tcity"

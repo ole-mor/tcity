@@ -359,6 +359,30 @@ src/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
+src/SimpleCube.o: src/SimpleCube.cpp.o
+.PHONY : src/SimpleCube.o
+
+# target to build an object file
+src/SimpleCube.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/SimpleCube.cpp.o
+.PHONY : src/SimpleCube.cpp.o
+
+src/SimpleCube.i: src/SimpleCube.cpp.i
+.PHONY : src/SimpleCube.i
+
+# target to preprocess a source file
+src/SimpleCube.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/SimpleCube.cpp.i
+.PHONY : src/SimpleCube.cpp.i
+
+src/SimpleCube.s: src/SimpleCube.cpp.s
+.PHONY : src/SimpleCube.s
+
+# target to generate assembly for a file
+src/SimpleCube.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcity.dir/build.make CMakeFiles/tcity.dir/src/SimpleCube.cpp.s
+.PHONY : src/SimpleCube.cpp.s
+
 src/glad/glad.o: src/glad/glad.c.o
 .PHONY : src/glad/glad.o
 
@@ -440,6 +464,9 @@ help:
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
+	@echo "... src/SimpleCube.o"
+	@echo "... src/SimpleCube.i"
+	@echo "... src/SimpleCube.s"
 	@echo "... src/glad/glad.o"
 	@echo "... src/glad/glad.i"
 	@echo "... src/glad/glad.s"

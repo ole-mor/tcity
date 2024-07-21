@@ -13,6 +13,7 @@
 #include "RenderObject.h"
 #include "LoadModel.h"
 #include "RenderGLTF.h"
+#include "SimpleCube.h"
 
 glm::mat4 projection;
 glm::vec3 cameraPos = glm::vec3(3.0f, 3.0f, -12.0f);
@@ -37,10 +38,24 @@ struct AnimationData {
     std::vector<glm::vec3> scales;
 };
 
+struct Material {
+    glm::vec4 baseColor;
+    float metallic;
+    float roughness;
+};
+
+struct Light {
+    glm::vec3 position;
+    glm::vec3 color;
+    float intensity;
+};
+
 class SpawnObject {
 public:
     std::vector<Mesh> meshes;
     std::vector<AnimationData> animations;
+    std::vector<Material> materials; // Store materials
+    std::vector<Light> lights;       // Store lights
     glm::vec3 position;
     glm::mat4 modelMatrix;
     float animationTime;
@@ -54,6 +69,8 @@ public:
             return;
         }
         LoadAnimationData(model);
+        LoadMaterialData(model); // Load materials
+        LoadLightData(model);    // Load lights
         for (const auto &gltfMesh : model.meshes) {
             CreateMeshFromGLTF(model, gltfMesh, meshes);
         }
@@ -93,6 +110,51 @@ public:
         }
     }
 
+    void LoadMaterialData(const tinygltf::Model &model) {
+        for (const auto &gltfMaterial : model.materials) {
+            Material material;
+            auto baseColorFactor = gltfMaterial.values.find("baseColorFactor");
+            if (baseColorFactor != gltfMaterial.values.end()) {
+                const auto &color = baseColorFactor->second.number_array;
+                material.baseColor = glm::vec4(color[0], color[1], color[2], color[3]);
+            } else {
+                material.baseColor = glm::vec4(1.0f);
+            }
+
+            auto metallicFactor = gltfMaterial.values.find("metallicFactor");
+            if (metallicFactor != gltfMaterial.values.end()) {
+                material.metallic = static_cast<float>(metallicFactor->second.Factor());
+            } else {
+                material.metallic = 1.0f;
+            }
+
+            auto roughnessFactor = gltfMaterial.values.find("roughnessFactor");
+            if (roughnessFactor != gltfMaterial.values.end()) {
+                material.roughness = static_cast<float>(roughnessFactor->second.Factor());
+            } else {
+                material.roughness = 1.0f;
+            }
+
+            materials.push_back(material);
+        }
+    }
+
+    void LoadLightData(const tinygltf::Model &model) {
+        for (const auto &node : model.nodes) {
+            if (node.extensions.find("KHR_lights_punctual") != node.extensions.end()) {
+                const auto &lightIndex = node.extensions.at("KHR_lights_punctual").Get("light").Get<int>();
+                const tinygltf::Light &light = model.lights[lightIndex];
+
+                Light lightData;
+                lightData.position = glm::vec3(node.translation[0], node.translation[1], node.translation[2]);
+                lightData.color = glm::vec3(light.color[0], light.color[1], light.color[2]);
+                lightData.intensity = light.intensity;
+
+                lights.push_back(lightData);
+            }
+        }
+    }
+
     void Update(float deltaTime) {
         animationTime += deltaTime * animationSpeed;
         if (!animations.empty()) {
@@ -107,6 +169,22 @@ public:
     void Render(Shader &shader) {
         glm::mat4 modelWithInitialPosition = glm::translate(modelMatrix, position);
         shader.setMat4("model", modelWithInitialPosition);
+        
+        // Set materials
+        if (!materials.empty()) {
+            shader.setVec4("material.baseColor", materials[0].baseColor);
+            shader.setFloat("material.metallic", materials[0].metallic);
+            shader.setFloat("material.roughness", materials[0].roughness);
+        }
+
+        // Set lights
+        for (size_t i = 0; i < lights.size(); ++i) {
+            shader.setVec3("lights[" + std::to_string(i) + "].position", lights[i].position);
+            shader.setVec3("lights[" + std::to_string(i) + "].color", lights[i].color);
+            shader.setFloat("lights[" + std::to_string(i) + "].intensity", lights[i].intensity);
+        }
+        shader.setInt("numLights", static_cast<int>(lights.size()));
+
         for (auto &mesh : meshes) {
             RenderMesh(mesh);
         }
@@ -225,7 +303,7 @@ int main() {
     shaderPtr = &shader;
 
     std::vector<SpawnObject> objects;
-    objects.emplace_back("../src/objects/untitled-cube-anim.glb", glm::vec3(-2.0f, 0.0f, -5.0f));
+    objects.emplace_back("../src/objects/untitled-cubered-material.glb", glm::vec3(-2.0f, 0.0f, -5.0f));
     objects.emplace_back("../src/objects/untitled-cube-anim.glb", glm::vec3(2.0f, 0.0f, -5.0f));
 
     int width, height;
@@ -234,6 +312,8 @@ int main() {
 
     lastFrameTime = glfwGetTime();
 
+    SimpleCube simpleCube(glm::vec3(0.0f, 0.0f, -5.0f), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f), 0.5f, 0.5f);
+
     while (!glfwWindowShouldClose(window)) {
         currentTime = glfwGetTime();
         float deltaTime = currentTime - lastFrameTime;
@@ -241,7 +321,7 @@ int main() {
 
         processInput(window);
 
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shader.reloadIfModified();
@@ -251,10 +331,22 @@ int main() {
         shader.setMat4("view", view);
         shader.setMat4("projection", projection);
 
+            // Set light properties
+        glm::vec3 lightColor(1.0f, 1.0f, 1.0f); // white light
+        shader.setVec3("lights[0].color", lightColor);
+
+        glm::vec3 lightPos(0.0f, -1.0f, -10.0f); // light coming from above
+        shader.setVec3("lights[0].position", lightPos);
+
+        float lightIntensity = 1.0f; // intensity of the light
+        shader.setFloat("lights[0].intensity", lightIntensity);
+
         for (auto &obj : objects) {
             obj.Update(deltaTime);
             obj.Render(shader);
         }
+
+        // simpleCube.Render(shader);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
